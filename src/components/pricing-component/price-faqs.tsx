@@ -1,4 +1,4 @@
-"use Client"
+"use client"
 import React, { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
 
