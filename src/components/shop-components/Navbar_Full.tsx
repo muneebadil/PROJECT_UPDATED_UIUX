@@ -11,7 +11,7 @@ import {
   FiSearch,
   FiShoppingCart,
   FiHeart,
-  FiChevronDown,
+  // FiChevronDown,
   FiMenu,
   FiX,
 } from "react-icons/fi";

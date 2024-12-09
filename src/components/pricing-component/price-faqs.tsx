@@ -1,11 +1,16 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
 
-const PriceFaqs = () => {
-  const [activeIndex, setActiveIndex] = useState(null);  // Track the active FAQ
+interface Faq {
+  question: string;
+  answer: string;
+}
 
-  const faqs = [
+const PriceFaqs = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);  // Track the active FAQ (either number or null)
+
+  const faqs: Faq[] = [ // Define type for faqs
     {
       question: "The quick fox jumps over the lazy dog",
       answer:
@@ -38,7 +43,7 @@ const PriceFaqs = () => {
     },
   ];
 
-  const toggleAccordion = (index : any) => {
+  const toggleAccordion = (index: number) => {  // Specify `number` type for index
     setActiveIndex(activeIndex === index ? null : index);  // Toggle between the active index or collapse
   };
 
